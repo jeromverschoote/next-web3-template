@@ -7,6 +7,10 @@ import { initReactI18next } from 'react-i18next';
 
 import enUS from 'translations/en-US/index.json';
 
+import Context from 'context';
+
+import { useWallet } from 'hooks/useWallet';
+
 i18n.use(initReactI18next).init({
   resources: {
     ['en-US']: {
@@ -20,8 +24,14 @@ i18n.use(initReactI18next).init({
   },
 });
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
-}
+const MyApp = ({ Component, pageProps }: AppProps) => {
+  const wallet = useWallet();
+
+  return (
+    <Context.Wallet.Provider value={wallet}>
+      <Component {...pageProps} />
+    </Context.Wallet.Provider>
+  );
+};
 
 export default MyApp;

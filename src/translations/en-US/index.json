@@ -37,6 +37,8 @@
 
     "toReturn": "Return",
 
+    "toConnect": "Connect Wallet",
+
     "isLoading": "Loading...",
     "isUploading": "Uploading...",
     "isDownloading": "Downloading..."

@@ -3,6 +3,7 @@ import Head from 'next/head';
 
 import META from 'constants/meta';
 
+import Navigation from 'components/Navigation';
 import Footer from 'components/Footer';
 
 import styles from './styles';
@@ -43,7 +44,10 @@ const Layout: React.FC<Props> = (props) => {
         {/* Bots */}
         <meta key="robots" name="robots" content="index, follow" />
       </Head>
-      <main className={styles.container}>{children}</main>
+      <Navigation />
+      <main className={styles.container}>
+        <div className={styles.content}>{children}</div>
+      </main>
       <Footer />
     </Fragment>
   );
