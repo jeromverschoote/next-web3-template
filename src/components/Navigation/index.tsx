@@ -2,6 +2,8 @@ import { useContext } from 'react';
 
 import { useTranslation } from 'react-i18next';
 
+import { useMetaMask } from 'hooks/useMetaMask';
+
 import Context from 'context';
 
 import Image from 'next/image';
@@ -9,12 +11,9 @@ import Button from 'components/Button';
 
 import styles from './styles';
 
-const DUMMY_WALLET = {
-  id: '1234',
-};
-
 const Navigation: React.FC = () => {
   const { t } = useTranslation();
+  const { account } = useMetaMask();
 
   const { value, set, clear } = useContext(Context.Wallet);
 
@@ -33,9 +32,9 @@ const Navigation: React.FC = () => {
       </a>
 
       {isConnected ? (
-        <Button.Secondary onClick={clear}>{value?.id}</Button.Secondary>
+        <Button.Secondary onClick={clear}>{value}</Button.Secondary>
       ) : (
-        <Button.Primary onClick={() => set(DUMMY_WALLET)}>
+        <Button.Primary onClick={() => set(account)}>
           {t('label.toConnect')}
         </Button.Primary>
       )}
