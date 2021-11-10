@@ -1,0 +1,79 @@
+{
+  "label": {
+    "lorem": "Lorem Ipsum",
+
+    "toOpen": "Open",
+    "toClose": "Close",
+
+    "toCreate": "Create",
+    "toRead": "Read",
+    "toUpdate": "Update",
+    "toDelete": "Delete",
+
+    "toAdd": "Add",
+    "toSearch": "Search",
+    "toEdit": "Edit",
+
+    "toCut": "Cut",
+    "toCopy": "Copy",
+    "toPaste": "Paste",
+
+    "toUpload": "Upload",
+    "toDownload": "Download",
+
+    "toRegister": "Register",
+    "toLogIn": "Log In",
+    "toLogOut": "Log Out",
+
+    "toCancel": "Cancel",
+    "toConfirm": "Confirm",
+    "toApply": "Apply",
+
+    "toDiscard": "Discard",
+    "toSave": "Save",
+
+    "toImport": "Import",
+    "toExport": "Export",
+
+    "toReturn": "Return",
+
+    "isLoading": "Loading...",
+    "isUploading": "Uploading...",
+    "isDownloading": "Downloading..."
+  },
+  "component": {
+    "footer": {
+      "content": "Powered by "
+    }
+  },
+  "view": {
+    "home": {
+      "title": {
+        "content": "Welcome to ",
+        "span": "Next.js!"
+      },
+      "subtitle": {
+        "content": "Get started by ",
+        "span": " pages/index.js"
+      },
+      "card": {
+        "documentation": {
+          "title": "Documentation",
+          "description": "Find in-depth information about Next.js features and API."
+        },
+        "learn": {
+          "title": "Learn",
+          "description": "Learn about Next.js in an interactive course with quizzes!"
+        },
+        "examples": {
+          "title": "Examples",
+          "description": "Discover and deploy boilerplate example Next.js projects."
+        },
+        "deploy": {
+          "title": "Deploy",
+          "description": "Instantly deploy your Next.js site to a public URL with Vercel."
+        }
+      }
+    }
+  }
+}
