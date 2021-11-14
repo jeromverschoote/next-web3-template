@@ -48,7 +48,6 @@ const Layout: React.FC<Props> = (props) => {
       <main className={styles.container}>
         <div className={styles.content}>{children}</div>
       </main>
-      <Footer />
     </Fragment>
   );
 };

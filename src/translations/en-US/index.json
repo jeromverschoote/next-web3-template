@@ -41,7 +41,9 @@
 
     "isLoading": "Loading...",
     "isUploading": "Uploading...",
-    "isDownloading": "Downloading..."
+    "isDownloading": "Downloading...",
+
+    "walletConnect": "Try WalletConnect"
   },
   "component": {
     "footer": {

@@ -1,19 +1,37 @@
 import styles from './styles';
 
+import Button from "../Button";
+import Modal from "../Modal";
+
+import { useState } from 'react';
+
 interface Props {
   title: string;
   description: string;
-  url: string;
 }
 
 const Card: React.FC<Props> = (props) => {
-  const { title, description, url } = props;
+  const { title, description } = props;
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openModal = () => {
+    setIsOpen(true);
+  }
 
   return (
-    <a href={url} className={styles.container}>
-      <h2>{title} &rarr;</h2>
-      <p>{description}</p>
-    </a>
+    <div className={styles.container}>
+      <div className="mr-4">
+        <h2 className="text-xl font-bold">{title}</h2>
+        <p className="text-gray-500">{description}</p>
+      </div>
+
+      <Button.Primary onClick={() => openModal()}>
+        Fractionize IREC
+      </Button.Primary>
+
+      <Modal isOpen={isOpen} setIsOpen={setIsOpen}></Modal>
+    </div>
   );
 };
 
