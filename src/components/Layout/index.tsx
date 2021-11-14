@@ -4,7 +4,6 @@ import Head from 'next/head';
 import META from 'constants/meta';
 
 import Navigation from 'components/Navigation';
-import Footer from 'components/Footer';
 
 import styles from './styles';
 

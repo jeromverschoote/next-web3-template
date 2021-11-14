@@ -1,4 +1,3 @@
-import { useContext } from 'react';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 
@@ -11,7 +10,7 @@ import styles from './styles';
 const Navigation: React.FC = () => {
   const { t } = useTranslation();
   // const { account } = useMetaMask();
-  const { openModal, web3, isLoggedIn } = useWalletConnect();
+  const { openModal, isLoggedIn } = useWalletConnect();
 
   // const { value, set, clear } = useContext(Context.Wallet);
 

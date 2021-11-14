@@ -7,6 +7,8 @@ export const useMetaMask = () => {
   const [account, setAccount]: any = useState(null);
   const [chainId, setChainId]: any = useState(null);
 
+  const ethereum = window.ethereum as any;
+
   const handleDetectProvider = useCallback(async () => {
     const provider = await detectEthereumProvider();
 
