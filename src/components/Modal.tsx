@@ -3,8 +3,7 @@ import { useWalletConnect } from 'hooks/useWalletConnect';
 import { Fragment, useRef } from 'react';
 
 import Button from "./Button";
-
-const VOLT_ADDRESS = "0xd25fdf4f89Fcb3385bf90841cB4bc73FCa360D52";
+import config from "../config";
 
 interface Props {
   isOpen: boolean;
@@ -20,12 +19,12 @@ const Modal: React.FC<Props> = (props) => {
     console.log(contract.methods);
     const value = inputRef?.current?.value;
 
-    console.log(contract.methods);
-
     if (value) {
       const accounts = await web3.eth.getAccounts();
 
-      contract.methods.transfer(VOLT_ADDRESS, value)
+      console.log(contract);
+
+      contract.methods.transfer(config.VOLT_CONTRACT, value)
         .send({ from: accounts[0] })
         .then((success: any) => console.log(success))
         .catch((err: any) => console.log(err));

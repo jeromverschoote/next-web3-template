@@ -19,11 +19,11 @@ const Home: NextPage = () => {
             description="Load up your certificates to tokenize them."
           />
           <InfoCard
-            title="Tokens in circulation"
+            title="VOLT tokens in circulation"
             data={tokenCount}
           />
           <InfoCard
-            title="Active certificates"
+            title="Active IREC certificates"
             data={activeCerts}
           />
         </div>
